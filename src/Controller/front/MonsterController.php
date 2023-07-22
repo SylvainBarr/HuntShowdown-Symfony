@@ -20,8 +20,16 @@ class MonsterController extends AbstractController
     #[Route('/', name: 'list')]
     public function index(): Response
     {
+        $targets = $this->monsterRepository->getMonstersByClassName('Targets');
+        $infected = $this->monsterRepository->getMonstersByClassName('Infected');
+        $marked = $this->monsterRepository->getMonstersByClassName('Marked');
+        $packs = $this->monsterRepository->getMonstersByClassName('Packs');
+
         return $this->render('front/pages/monster/index.html.twig', [
-            'monsters' => $this->monsterRepository->findAll(),
+            'targets' => $targets,
+            'infected' => $infected,
+            'marked' => $marked,
+            'packs' => $packs,
         ]);
     }
 

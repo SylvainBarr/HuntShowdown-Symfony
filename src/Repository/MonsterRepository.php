@@ -39,6 +39,15 @@ class MonsterRepository extends ServiceEntityRepository
         }
     }
 
+    public function getMonstersByClassName(string $name): array{
+        return $this->createQueryBuilder('m')
+            ->leftJoin('m.monsterClass', 'mc')
+            ->where('mc.name = :className')
+            ->setParameter('className', $name)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 //    /**
 //     * @return Monster[] Returns an array of Monster objects
 //     */

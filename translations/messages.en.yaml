@@ -14,3 +14,7 @@ pages:
     monster: 'Monster detail : %monsterName%'
     index: 'Hunt Showdown'
     index2: 'Quick description'
+    targets: 'Targets'
+    infected: 'Infected'
+    marked: 'Marked'
+    packs: 'Packs'
