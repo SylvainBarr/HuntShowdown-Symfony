@@ -1,0 +1,16 @@
+header:
+  nav:
+    index: "Home"
+    weapons: "Weapons"
+    tools: "Tools"
+    consumables: "Consumables"
+    legendaryHunters: "Legendary Hunters"
+    maps: "Maps"
+    monsters: "Monsters"
+    equipment: "Equipment"
+pages:
+  title:
+    monsters: 'Monsters List'
+    monster: 'Monster detail : %monsterName%'
+    index: 'Hunt Showdown'
+    index2: 'Quick description'

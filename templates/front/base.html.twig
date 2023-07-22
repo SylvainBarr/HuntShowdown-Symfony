@@ -14,11 +14,14 @@
     </head>
     <body>
     {% block header %}
+        {% include 'front/partials/common/_header.html.twig' %}
     {% endblock %}
     <main>
-        {% block body %}{% endblock %}
+        {% block body %}
+        {% endblock %}
     </main>
     {% block footer %}
+        {% include 'front/partials/common/_footer.html.twig' %}
     {% endblock %}
     </body>
 </html>

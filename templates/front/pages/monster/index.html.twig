@@ -1,0 +1,18 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}{{ 'pages.title.monsters'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="page-title my-5 ps-3">
+        <h2>{{ 'pages.title.monsters'|trans }}</h2>
+    </div>
+    <div class="my-3 d-flex justify-content-evenly">
+        {% for monster in monsters %}
+            <a href="{{ path('app_monster_show', {slug : monster.slug}) }}" class="monster-card col-lg-2 col-md-5 col-sm-10" style="background-image: url('{{ monster.imageUrl }}')">
+                <div class="monster-card-content">
+                    <div class="monster-name">{{ monster.name }}</div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
