@@ -81,6 +81,9 @@ class Weapon
     #[ORM\ManyToOne(targetEntity: DamageClass::class)]
     private $heavyMeleeClass;
 
+    #[ORM\ManyToOne(targetEntity: AmmoType::class)]
+    private $ammoType;
+
     public function __construct()
     {
         $this->legendaryWeaponSkins = new ArrayCollection();
@@ -207,6 +210,7 @@ class Weapon
     public function setMeleeDamage(?int $meleeDamage): self
     {
         $this->meleeDamage = $meleeDamage;
+
 
         return $this;
     }
@@ -369,6 +373,18 @@ class Weapon
     public function setHeavyMeleeClass(?DamageClass $heavyMeleeClass): self
     {
         $this->heavyMeleeClass = $heavyMeleeClass;
+
+        return $this;
+    }
+
+    public function getAmmoType(): ?AmmoType
+    {
+        return $this->ammoType;
+    }
+
+    public function setAmmoType(?AmmoType $ammoType): self
+    {
+        $this->ammoType = $ammoType;
 
         return $this;
     }
