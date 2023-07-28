@@ -2,7 +2,7 @@
     <div class="row">
         <div class="logo-div d-flex justify-content-evenly my-3">
             <h1 class="d-none">Hunt Showdown</h1>
-            <img src="https://chods-cheats.com/uploads/pages_media/0_Hunt_Logo_Black.png">
+            <img src="/images/Logo.png">
         </div>
     </div>
     <div id="header-fixed" class="">
@@ -18,7 +18,7 @@
                     <a href="">{{ 'header.nav.legendaryHunters'|trans }}</a>
                 </div>
                 <div>
-                    <a href="">{{ 'header.nav.maps'|trans }}</a>
+                    <a href="{{ path('app_map_list') }}">{{ 'header.nav.maps'|trans }}</a>
                 </div>
                 <div>
                     <a href="{{ path('app_monster_list') }}">{{ 'header.nav.monsters'|trans }}</a>

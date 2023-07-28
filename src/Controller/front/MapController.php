@@ -2,17 +2,20 @@
 
 namespace App\Controller\front;
 
+use App\Repository\MapRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+#[Route('/map', name: 'app_map_')]
 class MapController extends AbstractController
 {
-    #[Route('/map', name: 'app_map')]
-    public function index(): Response
+    #[Route('/', name: 'list')]
+    public function index(MapRepository $mapRepository): Response
     {
-        return $this->render('map/index.html.twig', [
-            'controller_name' => 'MapController',
+        return $this->render('front/pages/map/index.html.twig', [
+            'maps' => $mapRepository->findAll(),
         ]);
     }
 }

@@ -18,3 +18,5 @@ pages:
     infected: 'Infected'
     marked: 'Marked'
     packs: 'Packs'
+  maps:
+    title: 'Maps List'
