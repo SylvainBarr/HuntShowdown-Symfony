@@ -18,5 +18,7 @@ pages:
     infected: 'Infected'
     marked: 'Marked'
     packs: 'Packs'
+    hunter: 'Legendary Hunters List'
+    equipment: 'Equipment List'
   maps:
     title: 'Maps List'

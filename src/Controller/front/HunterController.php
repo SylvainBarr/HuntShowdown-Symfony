@@ -6,12 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+#[Route('/hunter', name: 'app_hunter_')]
 class HunterController extends AbstractController
 {
-    #[Route('/hunter', name: 'app_hunter')]
+    #[Route('/', name: 'list')]
     public function index(): Response
     {
-        return $this->render('hunter/index.html.twig', [
+        return $this->render('front/pages/hunter/index.html.twig', [
             'controller_name' => 'HunterController',
         ]);
     }
