@@ -84,6 +84,15 @@ class Weapon
     #[ORM\ManyToOne(targetEntity: AmmoType::class)]
     private $ammoType;
 
+    #[ORM\ManyToOne(targetEntity: UnlockCondition::class, inversedBy: 'weapons')]
+    private $unlockCondition;
+
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $unlockRank;
+
+    #[ORM\Column(type: 'text', nullable: true)]
+    private $unlockDescription;
+
     public function __construct()
     {
         $this->legendaryWeaponSkins = new ArrayCollection();
@@ -385,6 +394,42 @@ class Weapon
     public function setAmmoType(?AmmoType $ammoType): self
     {
         $this->ammoType = $ammoType;
+
+        return $this;
+    }
+
+    public function getUnlockCondition(): ?UnlockCondition
+    {
+        return $this->unlockCondition;
+    }
+
+    public function setUnlockCondition(?UnlockCondition $unlockCondition): self
+    {
+        $this->unlockCondition = $unlockCondition;
+
+        return $this;
+    }
+
+    public function getUnlockRank(): ?int
+    {
+        return $this->unlockRank;
+    }
+
+    public function setUnlockRank(?int $unlockRank): self
+    {
+        $this->unlockRank = $unlockRank;
+
+        return $this;
+    }
+
+    public function getUnlockDescription(): ?string
+    {
+        return $this->unlockDescription;
+    }
+
+    public function setUnlockDescription(?string $unlockDescription): self
+    {
+        $this->unlockDescription = $unlockDescription;
 
         return $this;
     }
