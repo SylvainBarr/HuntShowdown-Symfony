@@ -1,0 +1,15 @@
+@import '~bootstrap';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+
+@import "variables";
+@import "layout/global";
+@import "components/footer";
+@import "components/header";
+@import "components/monster-card";
+@import "layout/monster";
+@import "components/mapsAccordion";

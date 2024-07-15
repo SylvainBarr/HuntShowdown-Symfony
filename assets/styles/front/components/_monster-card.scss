@@ -1,0 +1,29 @@
+.monster-card{
+  position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  .monster-card-content{
+    color: $font-color-main;
+    .monster-name{
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.13);
+      text-align: center;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+    }
+  }
+  &:hover{
+    transform: scale(1.1);
+  }
+}

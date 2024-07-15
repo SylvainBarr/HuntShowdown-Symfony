@@ -1,0 +1,23 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}
+    {{ 'pages.title.monster'|trans({ '%monsterName%': monster.name }) }}
+{% endblock %}
+
+{% block body %}
+    <div class="page-title my-5 ps-5">
+        <h2>{{ 'pages.title.monster'|trans({ '%monsterName%': monster.name }) }}</h2>
+    </div>
+    <div class="my-3 d-flex flex-wrap justify-content-evenly">
+        <div class="col-lg-5 col-sm-10">
+            {{ monster.decription|raw }}
+        </div>
+        <div class="col-lg-4 col-sm-10 monster-image" style="background-image: url('{{ monster.imageUrl }}')">
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
+

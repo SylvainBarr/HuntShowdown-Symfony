@@ -1,0 +1,10 @@
+header:
+  nav:
+    index: "Accueil"
+    weapons: "Armes"
+    tools: "Outils"
+    consumables: "Consomables"
+    legendaryHunters: "Chasseurs légendaires"
+    maps: "Cartes"
+    monsters: "Monstres"
+    equipment: "Equipement"

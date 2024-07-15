@@ -1,0 +1,75 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}{{ 'pages.title.monsters'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="page-title my-5 ps-5">
+        <h2>{{ 'pages.title.monsters'|trans }}</h2>
+    </div>
+    <div class="my-5 mx-5">
+        {% if targets|length >= 1 %}
+            <div class="row my-4">
+                <div class="col-lg-2 col-md-12 px-5 ">
+                    <h3 class="ps-3">{{ 'pages.title.targets'|trans }}</h3>
+                </div>
+                <div class="col-lg-10 d-flex flex-wrap justify-content-start">
+                    {% for monster in targets %}
+                        <a href="{{ path('app_monster_show', {slug : monster.slug}) }}" class="monster-card col-lg-2 col-md-5 col-sm-10 my-2 mx-3" style="background-image: url('{{ monster.imageUrl }}')">
+                            <div class="monster-card-content">
+                                <div class="monster-name">{{ monster.name }}</div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% if infected|length >= 1 %}
+            <div class="row my-4">
+                <div class="col-lg-2 col-md-12 px-5 my-4">
+                    <h3 class="ps-3">{{ 'pages.title.infected'|trans }}</h3>
+                </div>
+                <div class="col-lg-10 d-flex flex-wrap justify-content-start">
+                    {% for monster in infected %}
+                        <a href="{{ path('app_monster_show', {slug : monster.slug}) }}" class="monster-card col-lg-2 col-md-5 col-sm-10 my-2 mx-3" style="background-image: url('{{ monster.imageUrl }}')">
+                            <div class="monster-card-content">
+                                <div class="monster-name">{{ monster.name }}</div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% if marked|length >= 1 %}
+            <div class="row my-4">
+                <div class="col-lg-2 col-md-12 px-5 my-4">
+                    <h3 class="ps-3">{{ 'pages.title.marked'|trans }}</h3>
+                </div>
+                <div class="col-lg-10 d-flex flex-wrap justify-content-start">
+                    {% for monster in marked %}
+                        <a href="{{ path('app_monster_show', {slug : monster.slug}) }}" class="monster-card col-lg-2 col-md-5 col-sm-10 my-2 mx-3" style="background-image: url('{{ monster.imageUrl }}')">
+                            <div class="monster-card-content">
+                                <div class="monster-name">{{ monster.name }}</div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% if packs|length >= 1 %}
+            <div class="row my-4">
+                <div class="col-lg-2 col-md-12 px-5 my-4">
+                    <h3 class="ps-3">{{ 'pages.title.packs'|trans }}</h3>
+                </div>
+                <div class="col-lg-10 d-flex flex-wrap justify-content-start">
+                    {% for monster in packs %}
+                        <a href="{{ path('app_monster_show', {slug : monster.slug}) }}" class="monster-card col-lg-2 col-md-5 col-sm-10 my-2 mx-3" style="background-image: url('{{ monster.imageUrl }}')">
+                            <div class="monster-card-content">
+                                <div class="monster-name">{{ monster.name }}</div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

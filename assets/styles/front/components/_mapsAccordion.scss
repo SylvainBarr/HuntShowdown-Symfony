@@ -1,0 +1,16 @@
+#Mapsaccordion{
+  .accordion-button{
+    background-color: $background-lighter;
+    color: $font-color-main;
+    z-index: 1;
+    &:visited{
+      color: $font-color-main;
+    }
+  }
+  .accordion-body{
+    background-color: $background-element;
+    img{
+      width: 500px;
+    }
+  }
+}

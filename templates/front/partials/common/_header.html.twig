@@ -1,0 +1,29 @@
+<header>
+    <div class="row">
+        <div class="logo-div d-flex justify-content-evenly my-3">
+            <h1 class="d-none">Hunt Showdown</h1>
+            <img src="/images/Logo.png">
+        </div>
+    </div>
+    <div id="header-fixed" class="">
+        <div class="row">
+            <div class="col-md-12 col-lg-10 mx-auto d-flex justify-content-evenly nav-menu">
+                <div>
+                    <a href="{{ path('app_home') }}">{{ 'header.nav.index'|trans }}</a>
+                </div>
+                <div>
+                    <a href="{{ path('app_equipment_list') }}">{{ 'header.nav.equipment'|trans }}</a>
+                </div>
+                <div>
+                    <a href="{{ path('app_hunter_list') }}">{{ 'header.nav.legendaryHunters'|trans }}</a>
+                </div>
+                <div>
+                    <a href="{{ path('app_map_list') }}">{{ 'header.nav.maps'|trans }}</a>
+                </div>
+                <div>
+                    <a href="{{ path('app_monster_list') }}">{{ 'header.nav.monsters'|trans }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
