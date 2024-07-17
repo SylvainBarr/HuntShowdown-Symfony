@@ -1,0 +1,2 @@
+Projet d'un Fan site sur le jeu Hunt Showdown
+Celui-ci regroupera toutes les cartes du jeu, les statistiques de toutes les armes et j'avais également prévu une page pour les skins légendaires d'armes et chasseurs, toutefois le jeu va subir sa plus grosse mise à jour en aout et pas mal de choses vont changer, j'attends donc les nouvelles valeurs des armes et les modifications des skins pour supprimer ou ajuster mes entités
